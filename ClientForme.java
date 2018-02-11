@@ -370,6 +370,8 @@ public class ClientForme extends JFrame implements ActionListener {
     protected void dessinerFormes() {
         // TODO: 2018-02-10 timing for GET sending and END sending
         server.connectionServer();
+        String commande = server.recoiechaine();
+        assert commande.equals("commande>");
         formes.add(factory.makeForme(server.recoiechaine()));
         this.repaint();
         try {
