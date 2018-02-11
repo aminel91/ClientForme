@@ -130,7 +130,7 @@ public class ClientForme extends JFrame implements ActionListener {
         getContentPane().add(new JScrollPane(new CustomCanvas()));
     }
 
-    public static void mains(String[] args) {
+    public static void main(String[] args) {
         ClientForme frame = new ClientForme();
 
         frame.makeFileMenu();

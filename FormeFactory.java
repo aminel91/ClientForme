@@ -23,6 +23,7 @@ public class FormeFactory {
     }
 
     public Forme makeForme(String description) {
+        System.out.println("Description "+description);
         IDLogger idLogger = IDLogger.getInstance();
         StringTokenizer tokenizer = new StringTokenizer(description, "<>/ ", false);
         int cnt = 0;
@@ -57,7 +58,7 @@ public class FormeFactory {
         return null;
     }
 
-    public static void main(String[] args) {
+    public static void mains(String[] args) {
         FormeFactory f = FormeFactory.getFactory();
         String forme = "12345<CERCLE>2 3 4</CERCLE>";
         System.out.println(f.makeForme(forme) instanceof Cercle);
